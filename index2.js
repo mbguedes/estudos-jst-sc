@@ -5,12 +5,19 @@ class Cliente {
     rg;
 }
 
-class ContaCorrente{ //criando um método para ~sacar~ dinheiro da conta corrente
+class ContaCorrente{ //criando uma classe para a conta corrente
     agencia;
-    saldo;
+    _saldo;
+
     sacar(valor){
         if(this.saldo >= valor){
             this.saldo -= valor;
+        }
+    }
+//criando um método para ~depositar~ dinheiro na conta corrente
+    depositar(valor){
+        if(valor > 0){
+            this.saldo =+ valor;
         }
     }
 }
@@ -31,5 +38,3 @@ contaCorrenteMarcio.saldo = 300;
 contaCorrenteMarcio.agencia = 1001;
 
 
-
-console.log(cliente1, "\n", cliente2); // impressão dos atributos dos clientes
