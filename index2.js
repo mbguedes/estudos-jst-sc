@@ -10,15 +10,17 @@ class ContaCorrente{ //criando uma classe para a conta corrente
     _saldo;
 
     sacar(valor){
-        if(this.saldo >= valor){
-            this.saldo -= valor;
+        if(this._saldo >= valor){
+            this._saldo -= valor;
+            return valor;
         }
     }
 //criando um método para ~depositar~ dinheiro na conta corrente
     depositar(valor){
-        if(valor > 0){
-            this.saldo =+ valor;
-        }
+        if(valor > 0) return;
+        
+        this._saldo =+ valor;
+        
     }
 }
 
@@ -34,7 +36,7 @@ cliente2.cpf = 55522233309;
 cliente2.rg = 123456784;
 
 const contaCorrenteMarcio = new ContaCorrente();
-contaCorrenteMarcio.saldo = 300;
+contaCorrenteMarcio._saldo = 300;
 contaCorrenteMarcio.agencia = 1001;
 
-
+const valorSacado = contaCorrenteMarcio.sacar(50);
