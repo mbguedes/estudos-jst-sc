@@ -1,0 +1,20 @@
+{
+  "name": "projetobank",
+  "version": "1.0.0",
+  "description": "Projeto de estudo de uma instituição bancária básica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbguedes/estudos-jst-sc.git"
+  },
+  "author": "MarcioDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbguedes/estudos-jst-sc/issues",
+    "type": "module"
+  },
+  "homepage": "https://github.com/mbguedes/estudos-jst-sc#readme"
+}
