@@ -1,18 +1,28 @@
-export class ContaCorrente{ //criando uma classe para a conta corrente
+export class ContaCorrente {
     agencia;
-    _saldo;
+    cliente;
 
-    sacar(valor){
-        if(this._saldo >= valor){
+    _saldo = 0;
+
+    sacar(valor) {
+        if (this._saldo >= valor) {
             this._saldo -= valor;
             return valor;
         }
+
     }
-//criando um método para ~depositar~ dinheiro na conta corrente
-    depositar(valor){
-        if(valor > 0) return;
-        
-        this._saldo =+ valor;
-        
+
+    depositar(valor) {
+        if(valor <= 0) {
+            return;
+        }
+        this._saldo += valor;
     }
+
+    transferir (valor, conta) {
+        const valorSacado = this.sacar(valor);
+        conta.depositar(valorSacado);
+    
+    }
+
 }
